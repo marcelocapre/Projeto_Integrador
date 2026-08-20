@@ -1,4 +1,4 @@
-# Lista de Tarefas
+# Lista_de_Tarefas
 
 Aplicativo Android para organizar tarefas por dia do mês. Funciona sem internet e guarda tudo no próprio aparelho: não existe servidor, API ou banco de dados na nuvem.
 

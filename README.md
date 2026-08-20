@@ -5,6 +5,11 @@ Aplicativo Android para organizar tarefas por dia do mês. Funciona sem internet
 Projeto Integrador Transdisciplinar  
 Marcelo dos Santos Capre — RGM 32984561
 
+**Baixar o aplicativo (APK):**  
+[apk/Lista-de-Tarefas.apk](https://github.com/marcelocapre/Projeto_Integrador/raw/main/apk/Lista-de-Tarefas.apk)
+
+No celular Android, abra o arquivo baixado e permita a instalação de fontes desconhecidas, se o sistema pedir. O aplicativo não abre pelo navegador: ele precisa ser instalado no aparelho.
+
 ---
 
 ## O problema

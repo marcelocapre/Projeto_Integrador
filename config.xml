@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.marcelo.listadetarefas" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Lista de Tarefas</name>
+    <description>
+        Lista de tarefas organizadas por dia do mês, com dados guardados no próprio aparelho.
+    </description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <!--
+      O Cordova lê estas preferências na raiz do widget. Se ficarem só dentro
+      de <platform name="android">, o prepare ignora e usa o splash padrão.
+    -->
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash/splashscreen.png" />
+    <preference name="AndroidWindowSplashScreenBackground" value="#000000" />
+    <preference name="BackgroundColor" value="#121212" />
+    <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#000000" />
+    <preference name="AndroidWindowSplashScreenAnimationDuration" value="400" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="1500" />
+    <preference name="FadeSplashScreenDuration" value="400" />
+    <!--
+      O app funciona inteiramente offline: não acessa servidor nem carrega
+      recursos externos, por isso não precisa de permissões de rede.
+    -->
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <platform name="android">
+    <!--
+      Galeria e câmera do avatar. Sem isso o seletor de imagem do WebView
+      abre e fecha vazio no Android 13+.
+    -->
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+        <uses-permission android:name="android.permission.CAMERA" />
+    </config-file>
+    <icon src="res/mipmap-anydpi-v26/ic_launcher.xml" />
+    <icon monochrome="res/mipmap-mdpi/ic_launcher_monochrome.png" 
+          background="res/mipmap-mdpi/ic_launcher_background.png" 
+          density="mdpi" 
+          foreground="res/mipmap-mdpi/ic_launcher_foreground.png" />
+    <icon monochrome="res/mipmap-hdpi/ic_launcher_monochrome.png" 
+          background="res/mipmap-hdpi/ic_launcher_background.png" 
+          density="hdpi" 
+          foreground="res/mipmap-hdpi/ic_launcher_foreground.png" />
+    <icon monochrome="res/mipmap-xhdpi/ic_launcher_monochrome.png" 
+          background="res/mipmap-xhdpi/ic_launcher_background.png" 
+          density="xhdpi" 
+          foreground="res/mipmap-xhdpi/ic_launcher_foreground.png" />
+    <icon monochrome="res/mipmap-xxhdpi/ic_launcher_monochrome.png" 
+          background="res/mipmap-xxhdpi/ic_launcher_background.png" 
+          density="xxhdpi" 
+          foreground="res/mipmap-xxhdpi/ic_launcher_foreground.png" />
+    <icon monochrome="res/mipmap-xxxhdpi/ic_launcher_monochrome.png" 
+          background="res/mipmap-xxxhdpi/ic_launcher_background.png" 
+          density="xxxhdpi" 
+          foreground="res/mipmap-xxxhdpi/ic_launcher_foreground.png" />
+</platform>
+</widget>

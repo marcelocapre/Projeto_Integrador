@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -9,8 +9,14 @@
     <meta property="og:description" content="Aplicativo simples e organizado de lista de tarefas por dia do mês." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <script type="module" crossorigin src="./assets/index-DdKPKmIw.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DpOKUqza.css">
+    <script>
+      try {
+        var d = JSON.parse(localStorage.getItem('lista_tarefas_aparencia_v1') || '{}');
+        document.documentElement.setAttribute('data-theme', d.theme === 'light' ? 'light' : 'dark');
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-CekDhGGN.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Cfu-pA9R.css">
   </head>
   <body class="antialiased min-h-screen">
     <div id="root"></div>

@@ -15,7 +15,13 @@
         document.documentElement.setAttribute('data-theme', d.theme === 'light' ? 'light' : 'dark');
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="./assets/index-CekDhGGN.js"></script>
+    <script>
+      // Só existe dentro do APK. No navegador o Vite não tem esse arquivo.
+      if (location.protocol === 'file:') {
+        document.write('<script src="cordova.js"><\/script>');
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index-DOQ6dm-c.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-Cfu-pA9R.css">
   </head>
   <body class="antialiased min-h-screen">

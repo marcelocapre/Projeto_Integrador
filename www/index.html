@@ -16,12 +16,16 @@
       } catch (e) {}
     </script>
     <script>
-      // Só existe dentro do APK. No navegador o Vite não tem esse arquivo.
-      if (location.protocol === 'file:') {
+      // Dentro do APK o Cordova serve a página em https://localhost (sem porta) ou em file://.
+      // O servidor do Vite sempre usa porta, e lá esse arquivo não existe.
+      if (location.protocol === 'file:' || !location.port) {
+        document.addEventListener('deviceready', function () {
+          window.__cordovaDeviceReady = true;
+        });
         document.write('<script src="cordova.js"><\/script>');
       }
     </script>
-    <script type="module" crossorigin src="./assets/index-DOQ6dm-c.js"></script>
+    <script type="module" crossorigin src="./assets/index-Pcw_c8eg.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-Cfu-pA9R.css">
   </head>
   <body class="antialiased min-h-screen">
